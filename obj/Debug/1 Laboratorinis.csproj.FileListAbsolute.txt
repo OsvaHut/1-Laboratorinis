@@ -1,0 +1,14 @@
+C:\Users\osvdau1\OneDrive - Kaunas University of Technology\Savarankiki darbai\1 Laboratorinis\bin\Debug\1 Laboratorinis.exe.config
+C:\Users\osvdau1\OneDrive - Kaunas University of Technology\Savarankiki darbai\1 Laboratorinis\bin\Debug\1 Laboratorinis.exe
+C:\Users\osvdau1\OneDrive - Kaunas University of Technology\Savarankiki darbai\1 Laboratorinis\bin\Debug\1 Laboratorinis.pdb
+C:\Users\osvdau1\OneDrive - Kaunas University of Technology\Savarankiki darbai\1 Laboratorinis\obj\Debug\1 Laboratorinis.csproj.AssemblyReference.cache
+C:\Users\osvdau1\OneDrive - Kaunas University of Technology\Savarankiki darbai\1 Laboratorinis\obj\Debug\1 Laboratorinis.csproj.CoreCompileInputs.cache
+C:\Users\osvdau1\OneDrive - Kaunas University of Technology\Savarankiki darbai\1 Laboratorinis\obj\Debug\1 Laboratorinis.exe
+C:\Users\osvdau1\OneDrive - Kaunas University of Technology\Savarankiki darbai\1 Laboratorinis\obj\Debug\1 Laboratorinis.pdb
+C:\Users\osval\OneDrive - Kaunas University of Technology\Savarankiki darbai\1 Laboratorinis\obj\Debug\1 Laboratorinis.csproj.AssemblyReference.cache
+C:\Users\osval\OneDrive - Kaunas University of Technology\Savarankiki darbai\1 Laboratorinis\obj\Debug\1 Laboratorinis.csproj.CoreCompileInputs.cache
+C:\Users\osval\OneDrive - Kaunas University of Technology\Savarankiki darbai\1 Laboratorinis\obj\Debug\1 Laboratorinis.exe
+C:\Users\osval\OneDrive - Kaunas University of Technology\Savarankiki darbai\1 Laboratorinis\obj\Debug\1 Laboratorinis.pdb
+C:\Users\osval\OneDrive - Kaunas University of Technology\Savarankiki darbai\1 Laboratorinis\bin\Debug\1 Laboratorinis.exe.config
+C:\Users\osval\OneDrive - Kaunas University of Technology\Savarankiki darbai\1 Laboratorinis\bin\Debug\1 Laboratorinis.exe
+C:\Users\osval\OneDrive - Kaunas University of Technology\Savarankiki darbai\1 Laboratorinis\bin\Debug\1 Laboratorinis.pdb
