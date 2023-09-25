@@ -1,11 +1,17 @@
-﻿//U2–1. Sodas
-//Sukurkite klasę Medis, kuri turėtų kintamuosius amžiui ir aukščiui saugoti. Sode auga trys
-//skirtingos liepos. Raskite, koks aukščiausios liepos aukštis ir koks seniausios liepos amžius.
-//Papildykite klasę Medis kintamuoju, skirtu medžio lajos skersmeniui saugoti. Sukurkite klasę
-//Sodas, kuris turėtų kintamuosius parko ilgiui ir pločiui saugoti. Kiek sode gali augti kiekvieno
-//amžiaus skirtingo dydžio liepų?
-//Papildykite klasę Sodas metodu Dėti(), kuris leistų keisti sodo dydį. Ar sodo plotą padidinus
-//dvigubai jame tilps tiek didžiausios lajos liepų, kiek mažesniame sode tilpo mažiausios lajos liepų?
+//--------------------------------------------------------------------
+// Užduotis:
+// * Sukurkite klasę Medis, kuri turėtų kintamuosius amžiui ir
+// aukščiui saugoti. Sode auga trys skirtingos liepos.
+// Raskite, koks aukščiausios liepos aukštis ir koks seniausios
+// liepos amžius.
+// * Papildykite klasę Medis kintamuoju, skirtu medžio lajos
+// skersmeniui saugoti. Sukurkite klasę Sodas, kuris turėtų
+// kintamuosius parko ilgiui ir pločiui saugoti. Kiek sode gali augti
+// kiekvieno amžiaus skirtingo dydžio liepų?
+// * Papildykite klasę Sodas metodu Dėti(), kuris leistų keisti sodo
+// dydį. Ar sodo plotą padidinus dvigubai jame tilps tiek didžiausios
+// lajos liepų, kiek mažesniame sode tilpo mažiausios lajos liepų?
+//--------------------------------------------------------------------
 
 using System;
 using System.Collections.Generic;
@@ -13,20 +19,23 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+
 /// <summary>
 /// Klasė medžio duomenims saugoti
 /// </summary>
 class Medis
 {
-    private double amžius,        //Medžio amžius
-                   aukštis,       //Medžio aukštis (metrais)
-                   lajosSkersmuo; //Medžio lajos skersmuo (metrais)
+    private double amžius,        // Medžio amžius
+                   aukštis,       // Medžio aukštis (metrais)
+                   lajosSkersmuo; // Medžio lajos skersmuo (metrais)
+
     /// <summary>
     /// Sukuria naują medį ir suteikia jam išmatavimus
     /// </summary>
     /// <param name="amžiausReikšmė">Medžio amžiaus reikšmė</param>
     /// <param name="aukščioReikšmė">Medžio aukščio reikšmė</param>
-    /// <param name="lajosSkersmensReikšmė">Medžio lajos skermens reikšmė</param>
+    /// <param name="lajosSkersmensReikšmė">Medžio lajos skermens 
+    /// reikšmė</param>
     public Medis(double amžiausReikšmė, double aukščioReikšmė,
                  double lajosSkersmensReikšmė)
     {
@@ -34,29 +43,33 @@ class Medis
         aukštis = aukščioReikšmė;
         lajosSkersmuo = lajosSkersmensReikšmė;
     }
+
     /// <summary>
     /// Paimamas medžio amžius
     /// </summary>
     /// <returns></returns>
     public double ImtiAmžių() { return amžius; }
+
     /// <summary>
     /// Paimamas medžio aukštis
     /// </summary>
     /// <returns></returns>
     public double ImtiAukštį() { return aukštis; }
+
     /// <summary>
     /// Paimamas medžio lajos skersmuo
     /// </summary>
     /// <returns></returns>
     public double ImtiSkersmenį() { return lajosSkersmuo; }
 }
+
 /// <summary>
 /// Klasė sodo duomenims saugoti
 /// </summary>
 class Sodas
 {
-    private double ilgis,    //Sodo ilgis metrais
-                   plotis;   //Sodo plotis metrais
+    private double ilgis,    // Sodo ilgis (metrais)
+                   plotis;   // Sodo plotis (metrais)
     /// <summary>
     /// Sukuria naują sodą ir suteikia jam išmatavimus
     /// </summary>
@@ -67,16 +80,19 @@ class Sodas
         ilgis = ilgioReikšmė;
         plotis = pločioReikšmė;
     }
+
     /// <summary>
     /// Paimamas sodo ilgis
     /// </summary>
     /// <returns></returns>
     public double ImtiIlgį() { return ilgis; }
+
     /// <summary>
     /// Paimamas sodo plotis
     /// </summary>
     /// <returns></returns>
     public double ImtiPlotį() { return plotis; }
+
     /// <summary>
     /// Pakeičia objekto ilgį ir plotį
     /// </summary>
@@ -125,7 +141,8 @@ namespace _1_Laboratorinis
            Medis Liepa2 = NaujaLiepa(2);
            Medis Liepa3 = NaujaLiepa(3);
 
-            double maxAukštis = AukščiausiaLiepa(Liepa1, Liepa2, Liepa3);
+            double maxAukštis = AukščiausiaLiepa(Liepa1, Liepa2, 
+                                                 Liepa3);
             Console.WriteLine("Aukščiausios liepos aukštis: {0}",
                               maxAukštis);
 
@@ -190,10 +207,13 @@ namespace _1_Laboratorinis
 
             Console.WriteLine("Įveskite {0} liepos amžių: ", numeris);
             amžius = double.Parse(Console.ReadLine());
-            Console.WriteLine("Įveskite {0} liepos aukštį (metrais): ", numeris);
+            Console.WriteLine("Įveskite {0} liepos aukštį (metrais): "
+                              , numeris);
+
             aukštis = double.Parse(Console.ReadLine());
-            Console.WriteLine("Įveskite {0} liepos lajos skersmenį (metrais): ",
-                              numeris);
+            Console.WriteLine("Įveskite {0} liepos lajos skersmenį " +
+                "(metrais): ",numeris);
+
             lajosSkersmuo = double.Parse(Console.ReadLine());
 
             Medis Liepa;
@@ -226,9 +246,11 @@ namespace _1_Laboratorinis
             double ilgis,
                    plotis;
 
-            Console.WriteLine("Įveskite {0} sodo ilgį (metrais): ", numeris);
+            Console.WriteLine("Įveskite {0} sodo ilgį (metrais): ", 
+                               numeris);
             ilgis = double.Parse(Console.ReadLine());
-            Console.WriteLine("Įveskite {0} sodo plotį (metrais): ", numeris);
+            Console.WriteLine("Įveskite {0} sodo plotį (metrais): ", 
+                               numeris);
             plotis = double.Parse(Console.ReadLine());
 
             Sodas Parkas;
@@ -360,7 +382,8 @@ namespace _1_Laboratorinis
         /// <summary>
         /// Apskaičiuoja lajos spindulį
         /// </summary>
-        /// <param name="MaxLajosSkersmuo">Didžiausios lajos skersmuo</param>
+        /// <param name="MaxLajosSkersmuo">Didžiausios lajos 
+        /// skersmuo</param>
         /// <returns></returns>
         static double LajosSpindulys(double MaxLajosSkersmuo)
         {
@@ -398,7 +421,8 @@ namespace _1_Laboratorinis
             return maxMedžių;
         }
 
-        static void LiepųLentelė(Medis Liepa1, Medis Liepa2, Medis Liepa3, Sodas Parkas)
+        static void LiepųLentelė(Medis Liepa1, Medis Liepa2, 
+                                 Medis Liepa3, Sodas Parkas)
         {
             Console.WriteLine();
             Console.WriteLine("Liepos:");
