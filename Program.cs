@@ -207,6 +207,13 @@ namespace _1_Laboratorinis
             return Liepa;
 
         }
+        /// <summary>
+        /// Sukuria naują medį ir priskiria jam duomenis
+        /// </summary>
+        /// <param name="aukštis">Liepos aukštis</param>
+        /// <param name="amžius">Liepos amžius</param>
+        /// <param name="skersmuo">Liepos lajos skersmuo</param>
+        /// <returns>Liepa</returns>
 
         static Medis NaujaLiepaTestavimui(double aukštis, 
                                           double amžius,
@@ -215,7 +222,7 @@ namespace _1_Laboratorinis
 
            Medis Liepa = new Medis(amžius, aukštis, skersmuo);
 
-            return Liepa;
+           return Liepa;
         }
 
         /// <summary>
@@ -237,6 +244,12 @@ namespace _1_Laboratorinis
             return Parkas;
         }
 
+        /// <summary>
+        /// Sukuria naują sodą ir priskiria jam duomenis
+        /// </summary>
+        /// <param name="ilgis">Parko ilgis</param>
+        /// <param name="plotis">Parko plotis</param>
+        /// <returns>Parkas</returns>
         static Sodas NaujasSodasTestavimui(double ilgis, 
                                            double plotis)
         {
