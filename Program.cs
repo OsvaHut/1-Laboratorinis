@@ -187,29 +187,24 @@ namespace _1_Laboratorinis
         /// Sukuria naują medį ir suteikia jam numerį
         /// </summary>
         /// <param name="numeris">Medžio numeris</param>
-        /// <returns></returns>
+        /// <returns>Liepa</returns>
         static Medis NaujaLiepa(double numeris)
         {
-            double amžius,
-                   aukštis,
-                   lajosSkersmuo;
 
             Console.WriteLine("Įveskite {0} liepos amžių: ", numeris);
-            amžius = double.Parse(Console.ReadLine());
+           double amžius = AtsakymoPatikrinimas();
             Console.WriteLine("Įveskite {0} liepos aukštį (metrais): "
                               , numeris);
 
-            aukštis = double.Parse(Console.ReadLine());
+           double aukštis = AtsakymoPatikrinimas();
             Console.WriteLine("Įveskite {0} liepos lajos skersmenį " +
                 "(metrais): ",numeris);
 
-            lajosSkersmuo = double.Parse(Console.ReadLine());
+            double lajosSkersmuo = AtsakymoPatikrinimas();
 
-            Medis Liepa;
-            Liepa = new Medis(amžius, aukštis, lajosSkersmuo);
+            Medis Liepa = new Medis(amžius, aukštis, lajosSkersmuo);
 
             return Liepa;
-
 
         }
 
@@ -218,33 +213,26 @@ namespace _1_Laboratorinis
                                           double skersmuo)
         {
 
-            Medis Liepa;
-            Liepa = new Medis(amžius, aukštis, skersmuo);
+           Medis Liepa = new Medis(amžius, aukštis, skersmuo);
 
             return Liepa;
-
-
         }
 
         /// <summary>
         /// Sukuria nauja sodą ir suteikia jam numerį
         /// </summary>
         /// <param name="numeris">Sodo numeris</param>
-        /// <returns></returns>
+        /// <returns>Parkas</returns>
         static Sodas NaujasSodas(double numeris)
         {
-            double ilgis,
-                   plotis;
-
             Console.WriteLine("Įveskite {0} sodo ilgį (metrais): ", 
                                numeris);
-            ilgis = double.Parse(Console.ReadLine());
+            double ilgis = AtsakymoPatikrinimas();
             Console.WriteLine("Įveskite {0} sodo plotį (metrais): ", 
                                numeris);
-            plotis = double.Parse(Console.ReadLine());
+            double plotis = AtsakymoPatikrinimas();
 
-            Sodas Parkas;
-            Parkas = new Sodas(ilgis, plotis);
+            Sodas Parkas = new Sodas(ilgis, plotis);
 
             return Parkas;
         }
@@ -253,12 +241,10 @@ namespace _1_Laboratorinis
                                            double plotis)
         {
 
-            Sodas Parkas;
-            Parkas = new Sodas(ilgis, plotis);
+            Sodas Parkas = new Sodas(ilgis, plotis);
 
             return Parkas;
         }
-
 
         /// <summary>
         /// Ieškoma aukščiausia liepa
@@ -266,10 +252,10 @@ namespace _1_Laboratorinis
         /// <param name="Liepa1">Pirmos liepos duomenys</param>
         /// <param name="Liepa2">Antros liepos duomenys</param>
         /// <param name="Liepa3">Trečios liepos duomenys</param>
-        /// <returns></returns>
+        /// <returns>Aukščiausios liepos aukštis</returns>
         static double AukščiausiaLiepa(Medis Liepa1,
-                                    Medis Liepa2,
-                                    Medis Liepa3)
+                                       Medis Liepa2,
+                                       Medis Liepa3)
         {
             double maxAukštis = 0;
 
@@ -299,7 +285,7 @@ namespace _1_Laboratorinis
         /// <param name="Liepa1">Pirmos liepos duomenys</param>
         /// <param name="Liepa2">Antros liepos duomenys</param>
         /// <param name="Liepa3">Trečios liepos duomenys</param>
-        /// <returns></returns>
+        /// <returns>Seniausios liepos amžius</returns>
         static double SeniausiaLiepa(Medis Liepa1,
                                   Medis Liepa2,
                                   Medis Liepa3)
@@ -332,12 +318,12 @@ namespace _1_Laboratorinis
         /// <param name="Liepa1">Pirmos liepos duomenys</param>
         /// <param name="Liepa2">Antros liepos duomenys</param>
         /// <param name="Liepa3">Trečios liepos duomenys</param>
-        /// <returns></returns>
+        /// <returns>Didžiausios lajos skersmuo</returns>
         static double MaxLajosSkermuo(Medis Liepa1,
-                                   Medis Liepa2,
-                                   Medis Liepa3)
+                                      Medis Liepa2,
+                                      Medis Liepa3)
         {
-            double maxSkersmuo;
+            double maxSkersmuo = 0;
 
             if (Liepa1.ImtiSkersmenį() > Liepa2.ImtiSkersmenį() &&
                 Liepa1.ImtiSkersmenį() > Liepa3.ImtiSkersmenį())
@@ -363,7 +349,7 @@ namespace _1_Laboratorinis
         /// Apskaičiuoja sodo plotą
         /// </summary>
         /// <param name="Parkas">Parko duomenys</param>
-        /// <returns></returns>
+        /// <returns>Sodo plotas</returns>
         static double SodoPlotas(Sodas Parkas)
         {
             double sodoPlotas;
@@ -378,7 +364,7 @@ namespace _1_Laboratorinis
         /// </summary>
         /// <param name="MaxLajosSkersmuo">Didžiausios lajos 
         /// skersmuo</param>
-        /// <returns></returns>
+        /// <returns>Lajos spindulys</returns>
         static double LajosSpindulys(double MaxLajosSkersmuo)
         {
             double lajosSpindulys;
@@ -392,7 +378,7 @@ namespace _1_Laboratorinis
         /// Apskaičiuoja lajos plotą
         /// </summary>
         /// <param name="lajosSpindulys">lajos spindulys</param>
-        /// <returns></returns>
+        /// <returns>Lajos plotas</returns>
         static double LajosPlotas(double lajosSpindulys)
         {
             double lajosPlotas;
@@ -407,7 +393,7 @@ namespace _1_Laboratorinis
         /// </summary>
         /// <param name="sodoPlotas">Sodo plotas</param>
         /// <param name="lajosPlotas">Lajos skersmens plotas</param>
-        /// <returns></returns>
+        /// <returns>Daugiausia medžių</returns>
         static double MaxMedžių(double sodoPlotas, double lajosPlotas)
         {
             double maxMedžių;
@@ -430,34 +416,23 @@ namespace _1_Laboratorinis
             Console.WriteLine();
             Console.WriteLine("Liepos:");
 
-            for (int i = 0; i < 57; i++)
-            {
-                Console.Write("-");
-            }
-            Console.WriteLine("-");
+            Console.WriteLine(new string('-', 58));
 
             Console.WriteLine
                 ("{0, 9} |{1, 8} |{2, 7} |{3, 15} |{4,11}", 
                 "Objektas", "Aukštis", "Amžius", "Lajos skersmuo", 
                 "Sode telpa");
-                for (int i = 0; i < 57; i++)
-                {
-                    Console.Write("-");
-                }
-                Console.WriteLine("-");
 
-                
+            Console.WriteLine(new string('-', 58));
+
+
             Console.WriteLine
                 ("{0, 9} |{1, 8} |{2, 7} |{3, 15} |{4,11}", "Liepa1", 
                 Liepa1.ImtiAukštį(), Liepa1.ImtiAmžių(), 
                 Liepa1.ImtiSkersmenį(), MaxMedžių(SodoPlotas(Parkas), 
                 LajosPlotas(LajosSpindulys(Liepa1.ImtiSkersmenį()))));
 
-            for (int i = 0; i < 57; i++)
-            {
-                Console.Write("-");
-            }
-            Console.WriteLine("-");
+            Console.WriteLine(new string('-', 58));
 
             Console.WriteLine
                 ("{0, 9} |{1, 8} |{2, 7} |{3, 15} |{4,11}", "Liepa2", 
@@ -465,11 +440,7 @@ namespace _1_Laboratorinis
                 Liepa2.ImtiSkersmenį(), MaxMedžių(SodoPlotas(Parkas), 
                 LajosPlotas(LajosSpindulys(Liepa2.ImtiSkersmenį()))));
 
-            for (int i = 0; i < 57; i++)
-            {
-                Console.Write("-");
-            }
-            Console.WriteLine("-");
+            Console.WriteLine(new string('-', 58));
 
             Console.WriteLine
                 ("{0, 9} |{1, 8} |{2, 7} |{3, 15} |{4,11}", "Liepa3", 
@@ -477,11 +448,7 @@ namespace _1_Laboratorinis
                 Liepa3.ImtiSkersmenį(), MaxMedžių(SodoPlotas(Parkas), 
                 LajosPlotas(LajosSpindulys(Liepa3.ImtiSkersmenį()))));
 
-            for (int i = 0; i < 57; i++)
-            {
-                Console.Write("-");
-            }
-            Console.WriteLine("-");
+            Console.WriteLine(new string('-', 58));
         }
 
         /// <summary>
@@ -492,31 +459,19 @@ namespace _1_Laboratorinis
         {
             Console.WriteLine();
             Console.WriteLine("Sodas:");
-            for (int i = 0; i < 27; i++)
-            {
-                Console.Write("-");
-            }
-            Console.WriteLine("-");
+            Console.WriteLine(new string('-', 28));
 
             Console.WriteLine
                 ("{0, 9} |{1, 8} |{2, 7}",
                 "Objektas", "Ilgis", "Plotis");
 
-            for (int i = 0; i < 27; i++)
-            {
-                Console.Write("-");
-            }
-            Console.WriteLine("-");
+            Console.WriteLine(new string('-', 28));
 
             Console.WriteLine
                 ("{0, 9} |{1, 8} |{2, 7}", 
                 "Parkas", Parkas.ImtiIlgį(), Parkas.ImtiPlotį());
 
-            for (int i = 0; i < 27; i++)
-            {
-                Console.Write("-");
-            }
-            Console.WriteLine("-");
+            Console.WriteLine(new string('-', 28));
         }
 
         /// <summary>
@@ -526,16 +481,12 @@ namespace _1_Laboratorinis
         /// <param name="Liepa2">Antros liepos duomenys</param>
         /// <param name="Liepa3">Trečios liepos duomenys</param>
         static void MaxAukščioLentelė(Medis Liepa1, Medis Liepa2, 
-            Medis Liepa3)
+                                      Medis Liepa3)
         {
             Console.WriteLine();
             Console.WriteLine("Aukščiausia/-os liepa/-os:");
 
-            for (int i = 0; i < 18; i++)
-            {
-                Console.Write("-");
-            }
-            Console.WriteLine("-");
+            Console.WriteLine(new string('-', 19));
 
             Console.WriteLine
                 ("{0, 9} |{1, 8}",
@@ -563,39 +514,27 @@ namespace _1_Laboratorinis
                 liepa3Max = true;
             }
 
-            if (liepa1Max)
+            if (ArAukščiausiasMedis(Liepa1, aukštisMax))
             {
-                for (int i = 0; i < 18; i++)
-                {
-                    Console.Write("-");
-                }
-                Console.WriteLine("-");
+                Console.WriteLine(new string('-', 19));
 
                 Console.WriteLine
                     ("{0, 9} |{1, 8}",
                     "Liepa1", aukštisMax);
             }
 
-            if (liepa2Max)
+            if(ArAukščiausiasMedis(Liepa2, aukštisMax))
             {
-                for (int i = 0; i < 18; i++)
-                {
-                    Console.Write("-");
-                }
-                Console.WriteLine("-");
+                Console.WriteLine(new string('-', 19));
 
                 Console.WriteLine
                     ("{0, 9} |{1, 8}",
                     "Liepa2", aukštisMax);
             }
 
-            if (liepa3Max)
+            if(ArAukščiausiasMedis(Liepa3, aukštisMax))
             {
-                for (int i = 0; i < 18; i++)
-                {
-                    Console.Write("-");
-                }
-                Console.WriteLine("-");
+                Console.WriteLine(new string('-', 19));
 
                 Console.WriteLine
                     ("{0, 9} |{1, 8}",
@@ -616,11 +555,7 @@ namespace _1_Laboratorinis
             Console.WriteLine();
             Console.WriteLine("Seniausia/-os liepa/-os:");
 
-            for (int i = 0; i < 18; i++)
-            {
-                Console.Write("-");
-            }
-            Console.WriteLine("-");
+            Console.WriteLine(new string('-', 19));
 
             Console.WriteLine
                 ("{0, 9} |{1, 8}",
@@ -650,11 +585,7 @@ namespace _1_Laboratorinis
 
             if (liepa1Max)
             {
-                for (int i = 0; i < 18; i++)
-                {
-                    Console.Write("-");
-                }
-                Console.WriteLine("-");
+                Console.WriteLine(new string('-', 19));
 
                 Console.WriteLine
                     ("{0, 9} |{1, 8}",
@@ -663,11 +594,7 @@ namespace _1_Laboratorinis
 
             if (liepa2Max)
             {
-                for (int i = 0; i < 18; i++)
-                {
-                    Console.Write("-");
-                }
-                Console.WriteLine("-");
+                Console.WriteLine(new string('-', 19));
 
                 Console.WriteLine
                     ("{0, 9} |{1, 8}",
@@ -676,11 +603,7 @@ namespace _1_Laboratorinis
 
             if (liepa3Max)
             {
-                for (int i = 0; i < 18; i++)
-                {
-                    Console.Write("-");
-                }
-                Console.WriteLine("-");
+                Console.WriteLine(new string('-', 19));
 
                 Console.WriteLine
                     ("{0, 9} |{1, 8}",
@@ -689,10 +612,39 @@ namespace _1_Laboratorinis
 
         }
 
+        static double AtsakymoPatikrinimas()
+        {
+            double teisingasAtsakymas;
+
+            while (true)
+            {
+                string atsakymas = Console.ReadLine();
+
+                if (double.TryParse(atsakymas, out teisingasAtsakymas)
+                    && teisingasAtsakymas > 0)
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Įvesta reikšmė yra netinkama." +
+                                      " Prašome įvesti teigiamą " +
+                                      "skaičių.");
+                }
+            }
+
+            return teisingasAtsakymas;
+        }
+        static bool ArAukščiausiasMedis(Medis Liepa, double Aukštis)
+        {
+
+            if(Liepa.ImtiAukštį() == Aukštis)
+            {
+                return true;
+            }
+            return false;
+        }
 
 
     }
 }
-
-
-
