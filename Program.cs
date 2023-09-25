@@ -107,6 +107,9 @@ class Sodas
 
 namespace _1_Laboratorinis
 {
+    /// <summary>
+    /// Programos pagrindinė klasė
+    /// </summary>
     internal class Program
     {
         static void Main(string[] args)
@@ -141,14 +144,6 @@ namespace _1_Laboratorinis
            Medis Liepa2 = NaujaLiepa(2);
            Medis Liepa3 = NaujaLiepa(3);
 
-            double maxAukštis = AukščiausiaLiepa(Liepa1, Liepa2, 
-                                                 Liepa3);
-            Console.WriteLine("Aukščiausios liepos aukštis: {0}",
-                              maxAukštis);
-
-            double maxAmžius = SeniausiaLiepa(Liepa1, Liepa2, Liepa3);
-            Console.WriteLine("Seniausios liepos amžius: {0}",
-                              maxAmžius);
 
             Sodas Parkas1 = NaujasSodas(1);
 
@@ -166,13 +161,6 @@ namespace _1_Laboratorinis
             double maxMedžių3 = MaxMedžių(SodoPlotas(Parkas1),
                              LajosPlotas(LajosSpindulys
                              (Liepa3.ImtiSkersmenį())));
-
-            Console.WriteLine("Daugiausia medžių pirmame sode: {0}",
-                              maxMedžių1);
-            Console.WriteLine("Daugiausia medžių antrame sode: {0}",
-                              maxMedžių2);
-            Console.WriteLine("Daugiausia medžių trečiame sode: {0}",
-                              maxMedžių3);
 
             LiepųLentelė(Liepa1, Liepa2, Liepa3, Parkas1);
             SodoLentelė(Parkas1);
@@ -194,6 +182,7 @@ namespace _1_Laboratorinis
             Console.Read();
 
         }
+
         /// <summary>
         /// Sukuria naują medį ir suteikia jam numerį
         /// </summary>
@@ -236,6 +225,7 @@ namespace _1_Laboratorinis
 
 
         }
+
         /// <summary>
         /// Sukuria nauja sodą ir suteikia jam numerį
         /// </summary>
@@ -302,6 +292,7 @@ namespace _1_Laboratorinis
             return maxAukštis;
 
         }
+
         /// <summary>
         /// Ieškoma seniausia liepa
         /// </summary>
@@ -334,6 +325,7 @@ namespace _1_Laboratorinis
             
             return maxAmžius;
         }
+
         /// <summary>
         /// Apskaičiuoja koks yra didžiausias liepos lajos skersmuo
         /// </summary>
@@ -366,6 +358,7 @@ namespace _1_Laboratorinis
             }
             return maxSkersmuo;
         }
+
         /// <summary>
         /// Apskaičiuoja sodo plotą
         /// </summary>
@@ -379,6 +372,7 @@ namespace _1_Laboratorinis
 
             return sodoPlotas;
         }
+
         /// <summary>
         /// Apskaičiuoja lajos spindulį
         /// </summary>
@@ -393,6 +387,7 @@ namespace _1_Laboratorinis
 
             return lajosSpindulys;
         }
+
         /// <summary>
         /// Apskaičiuoja lajos plotą
         /// </summary>
@@ -406,6 +401,7 @@ namespace _1_Laboratorinis
 
             return lajosPlotas;
         }
+
         /// <summary>
         /// Apskaičiuoja kiek daugiausiai medžių telpa sode
         /// </summary>
@@ -421,6 +417,13 @@ namespace _1_Laboratorinis
             return maxMedžių;
         }
 
+        /// <summary>
+        /// Atspausdina liepų duomenų lentelę
+        /// </summary>
+        /// <param name="Liepa1">Pirmos liepos duomenys</param>
+        /// <param name="Liepa2">Antros liepos duomenys</param>
+        /// <param name="Liepa3">Trečios liepos duomenys</param>
+        /// <param name="Parkas">Parko duomenys</param>
         static void LiepųLentelė(Medis Liepa1, Medis Liepa2, 
                                  Medis Liepa3, Sodas Parkas)
         {
@@ -481,6 +484,10 @@ namespace _1_Laboratorinis
             Console.WriteLine("-");
         }
 
+        /// <summary>
+        /// Atspausdina sodo duomenų lentelę
+        /// </summary>
+        /// <param name="Parkas">Parko duomenys</param>
         static void SodoLentelė(Sodas Parkas)
         {
             Console.WriteLine();
@@ -512,6 +519,12 @@ namespace _1_Laboratorinis
             Console.WriteLine("-");
         }
 
+        /// <summary>
+        /// Atspausdina didžiausios arba didžiausių liepų lentelę
+        /// </summary>
+        /// <param name="Liepa1">Pirmos liepos duomenys</param>
+        /// <param name="Liepa2">Antros liepos duomenys</param>
+        /// <param name="Liepa3">Trečios liepos duomenys</param>
         static void MaxAukščioLentelė(Medis Liepa1, Medis Liepa2, 
             Medis Liepa3)
         {
@@ -591,6 +604,12 @@ namespace _1_Laboratorinis
 
         }
 
+        /// <summary>
+        /// Atspausdina seniausios arba seniausių liepų lentelę
+        /// </summary>
+        /// <param name="Liepa1">Pirmos liepos duomenys</param>
+        /// <param name="Liepa2">Antros liepos duomenys</param>
+        /// <param name="Liepa3">Trečios liepos duomenys</param>
         static void MaxAmžiausLentelė(Medis Liepa1, Medis Liepa2,
            Medis Liepa3)
         {
